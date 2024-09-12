@@ -3,7 +3,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct node {
+struct node 	//struct members declarations
+
+{
     int data;
     struct node *prev;
     struct node *next;
@@ -53,7 +55,9 @@ int main() {
     return 0;
 }
 
-void insert_node_beginning(struct node *new_node) {
+void insert_node_beginning(struct node *new_node)   //INsert node at beggining function defination
+
+{
     if (head == NULL) {
         head = tail = new_node;
     } else {
@@ -63,7 +67,9 @@ void insert_node_beginning(struct node *new_node) {
     }
 }
 
-void print_list() {
+void print_list() 	//printf nodes data and address  function defination
+
+{
     struct node *temp = head;
     while (temp != NULL) {
         printf("%d   ", temp->data);
